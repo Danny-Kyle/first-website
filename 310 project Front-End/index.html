@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login Page</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="images/favicon.png"/>
+</head>
+<body>
+	<section class="main" style="background-image: url(images/background.png);">
+        
+        <nav>
+            <a href="#" class="logo">
+                <img src="images/logo.png" width="320px" />
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+            </label>
+            <ul class="menu" style="border-radius: 5px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Course Registration</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Apply Now</a></li>
+                <li><a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 5px; cursor: pointer;">Login</a></li>
+            </ul>
+        </nav>
+
+        <div id="id01" class="modal">
+  
+           <form class="modal-content animate" action="/action_page.php" method="post" style="
+            width: 700px; 
+        ">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <p style="font-size: 22px;">Student Login </p>
+                <hr>
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw"><a href="#">Register Here</a></span>
+                <span class="psw" style="margin-right: 11px;"><a href="#">Forgot password?</a></span>
+              </div>
+            </form>
+          </div>
+
+          <div class="home-content">
+            
+            <!--text-->
+            <div class="home-text" >
+                
+                <h3 style="color: white; letter-spacing: 3px;">Welcome to CST Department</h3>
+                <h1 style="color: white;"> Student Portal</h1>
+                <p style="color: white;">Ours is a department Dedicated to building and releasing the next generation of Scientists
+                    that will shake the world at a global scale and never be forgotten.</p>
+            <!--login-btn-->
+            <a href="#" class="main-login" style="border-radius: 5px;">Apply Now</a>
+            </div>
+            <!--img-->
+            <div class="home-img" style="width: 500px;">
+                <img src="images/sam.jpg" width="500px" style="text-shadow: 20px 22px;"/>
+                <marquee width="100%" direction="left" onmouseover="this.stop();"
+                onmouseout="this.start();">
+                    <a href="#" style="color: white;">Addmissions open February 2022,Computer Science,Management Information Systems, Architecture, Microbiology and so much more.</a>
+                    </marquee>
+                    <marquee width="100%" direction="right" onmouseover="this.stop();"
+                onmouseout="this.start();">
+                    <a href="#" style="color: white;">Addmissions open February 2022,Computer Science,Management Information Systems, Architecture, Microbiology and so much more.</a>
+                    </marquee>
+            </div>
+
+             <div class="arrow"></div>
+        <span class="scroll">Scroll</span>
+    </section>
+
+    		<!--services----------------------->
+    <section class="services">
+        <!--heading----------->
+        <div class="services-heading">
+            <h2>OUR PROFESSIONAL COURSES</h2>
+            <p>Some of the Illustrious Courses we offer aimed at making you the man or woman of tomorrow</p>
+        </div>
+        <!--box-container----------------->
+        <div class="box-container">
+            <!--box-1-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Computer Science</font>
+                <p>Do you wish to be one of the leading faces when it comes to programming, hacking or software engineering? Then Our Computer Science Program is jst the thing for you.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-2-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Management Information Systems</font>
+                <p>We expose you to the World of Programming, but we also give you a taste of the business world. Interested?</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-3-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>MicroBiology</font>
+                <p>Dive into the world of Micro-Organisms including all pathogens and all organisms in the Classification of Living Things</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-4-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Architecture</font>
+                <p>Wish to design the next Burj Khalifa? Or perhaps you would like to take a crack at the Faith Tabernacle? Our Architecture Program offers all these and more.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-1-------->
+
+        </div>
+    </section>
+
+
+ <footer>
+        <p>Copyright (C) - 2022 | Developed By MIS Group Consisting of Balogun Victor, Okechukwu Daniel, Adewoyin Adetunji, Adedeji Adetola and Olatunbosun Diekololaoluwa </a></p>
+    </footer>
+    <script>
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>   
+</body>
+</html>
